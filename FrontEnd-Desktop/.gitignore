@@ -1,0 +1,36 @@
+# Arquivos e diretórios do Node.js
+node_modules/
+npm-debug.log
+
+# Arquivos de compilação
+dist/
+build/
+
+# Dependências de desenvolvimento (se você usa yarn)
+.yarn/
+.yarnrc
+
+# Arquivos locais de configuração (personalizados para cada usuário)
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs e saídas temporárias
+*.log
+*.log.*
+*.tmp
+*.swp
+*.bak
+
+# Arquivos de configuração
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.staging
+.env.production
+
+# Outros
+yarn-error.log
+.idea/
