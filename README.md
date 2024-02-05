@@ -31,18 +31,24 @@ Desenvolvimento de uma aplicação com integração a um banco de dados MySQL. F
 
 ### Frontend - Web
 
-- <a href="https://www.typescriptlang.org/" title="Typescript"><img src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="Typescript" width="21px" height="21px"></a> &emsp; [Typescript] - JavaScript with syntax for types.
-- <a href="https://axios-http.com/" title="Vue"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Ftopics%2Fv-directive&psig=AOvVaw319fPJPpzFTEAq8oy34HO3&ust=1706845218471000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjOueqbiYQDFQAAAAAdAAAAABAO" alt="React" width="21px" height="21px"></a> &emsp; [Vue] - A JavaScript library for building user interfaces
-- <a href="https://reactjs.org/" title="Axios"><img src="[https://axios-http.com/assets/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg)" alt="React" width="21px" height="21px"></a> &emsp;[Axios] - For API communication
-- <a href="https://vitejs.dev/" title="Vite"><img src="https://github.com/get-icon/geticon/raw/master/icons/vite.svg" alt="Vite" width="21px" height="21px"></a>&emsp; [Vite] - Bundler for web aplications
+- <a href="https://www.typescriptlang.org/" title="Typescript"><img src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="Typescript" width="21px" height="21px"></a> &emsp; [Typescript] - JavaScript com sintaxe para tipos.
+- <a href="https://vuejs.org/" title="Vue"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue" width="21px" height="21px"></a> &emsp; [Vue] -Uma biblioteca JavaScript para construção de interfaces de usuário.
+- <a href="https://axios-http.com/" title="Axios"><img src="https://axios-http.com/assets/favicon.ico" alt="Axios" width="21px" height="21px"></a> &emsp; [Axios] - Para comunicação com APIs.
+- <a href="https://vitejs.dev/" title="Vite"><img src="https://github.com/get-icon/geticon/raw/master/icons/vite.svg" alt="Vite" width="21px" height="21px"></a> &emsp; [Vite] - Empacotador para aplicações web.
 
 ### Frontend - Desktop
 
+- <a href="https://www.electronjs.org/" title="Electron"> <img class="framework-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/2048px-Electron_Software_Framework_Logo.svg.png" alt="Electron" width="21px" height="21px"></a> &emsp; [Electron] - Framework para construção de aplicações desktop multiplataforma com tecnologias web.
+- <a href="#" title="HTML"><img class="framework-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" width="21px" height="21px"></a> &emsp; [HTML] Linguagem para construção de páginas web.
+- <a href="#" title="CSS"><img class="framework-logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" width="21px" height="21px"></a>  &emsp; [CSS]  Linguagem de folhas de estilo para páginas web.
+- <a href="#" title="JavaScript"><img class="framework-logo" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" width="21px" height="21px"></a> &emsp; [JavaScript] Linguagem de programação para desenvolvimento web.
+
+
 
 ### Backend
-- <a href="https://www.typescriptlang.org/" title="Typescript"><img src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="Typescript" width="21px" height="21px"></a>&emsp;  [Typescript] - JavaScript with syntax for types.
-- <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"></a>&emsp;  [Node.js](https://nodejs.org/) - Javascript Runtime
-- <a href="https://prisma.io/" title="Prisma"><img src="https://www.prisma.io/images/favicon-32x32.png" alt="Vite" width="21px" height="21px"></a>&emsp; [Prisma] -  Open source next-generation ORM
-- <a href="http://expressjs.com" title="Express"><img src="http://expressjs.com/images/favicon.png" alt="Vite" width="21px" height="21px"></a> &emsp;[Express] - Node JS Open-source framework for manage servers and routes
-- <a href="https://www.sqlite.org/index.html" title="# SQLite"><img src="https://www.prisma.io/prisma-in-your-ecosystem-page/sqllite.svg" alt="MySQL" width="21px" height="21px"></a>&emsp; [SQLite] - SQL database engine.
+- <a href="https://www.typescriptlang.org/" title="Typescript"><img src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="Typescript" width="21px" height="21px"></a>&emsp;  [Typescript] - JavaScript com sintaxe para tipos.
+- <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"></a>&emsp;  [Node.js](https://nodejs.org/) -  Ambiente de execução JavaScript.
+- <a href="https://prisma.io/" title="Prisma"><img src="https://www.prisma.io/images/favicon-32x32.png" alt="Vite" width="21px" height="21px"></a>&emsp; [Prisma] -  ORM (Object-Relational Mapping) de código aberto de próxima geração.
+- <a href="http://expressjs.com" title="Express"><img src="http://expressjs.com/images/favicon.png" alt="Vite" width="21px" height="21px"></a> &emsp;[Express] -  Framework de código aberto para gerenciar servidores e rotas em Node.js.
+- <a href="https://www.mysql.com/" title="MySQL"><img class="framework-logo" src="https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png" alt="MySQL" width="21px" height="21px"></a>&emsp; [MySQL] - Sistema de gerenciamento de banco de dados relacional.
 
