@@ -3,7 +3,16 @@ import "express-async-errors";
 import { routes } from "./routes";
 import { AppError } from "./errors/appErro";
 
+const cors = require('cors');
+
 const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:5173',  // Substitua pela origem do seu frontend
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  }));
 
 app.use(express.json());
 
