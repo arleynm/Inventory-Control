@@ -28,6 +28,7 @@ export class LoginUserCase {
         
         return {
             token,
+            user: name, 
             message: 'Login successful!',
         };
 

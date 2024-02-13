@@ -1,16 +1,18 @@
 <template>
   <div class="flex h-screen">
-    <!-- Div com imagem de fundo -->
     <div class="custom-container">
-    <!-- Conteúdo opcional dentro da div com a imagem de fundo -->
       <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
         <h1 class="text-white text-4xl font-bold">Seja bem-vindo!</h1>
       </div>
     </div>
-    <!-- Formulário de login -->
-    <div class="w-1/2 p-8 flex items-center justify-center" style="background-color: #FFEDD1;">
-      <form @submit.prevent="login" style="width: 80%; max-width: 400px;">
-        <h2 class="text-2xl font-bold mb-4 text-orange-500">Login</h2>
+
+    <div class="w-1/2 p-8 flex justify-center" style="background-color: #e0eee7;">
+
+      <form @submit.prevent="login"  style="width: 80%; max-width: 400px;">
+
+        <img src="../assets/logo (3).png" alt="Imagem" class="w-60 ml-20">
+
+        <h2 class="text-2xl font-bold mb-4 text-[#109798]">Login</h2>
 
         <div class="mb-4">
           <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
@@ -21,8 +23,8 @@
           <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Senha:</label>
           <input type="password" id="password" v-model="password" class="w-full p-3 border rounde">
         </div>
-
-        <button type="submit" class="bg-orange-500 text-white py-2 px-4 rounded border border-orange-500 transition duration-300 hover:bg-white hover:text-orange-500 hover:border-orange-500">Entrar</button>
+        <custom-alert :message="errorMessage" type="error" v-if="errorMessage" />
+        <button type="submit" class="bg-[#109798] text-white py-2 px-4 rounded border border-[#109798] transition duration-300 hover:bg-white hover:text-[#109798] hover:border-[#109798]">Entrar</button>
       </form>
     </div>
   </div>
@@ -38,37 +40,42 @@
 </style>
 
 <script>
-import { defineComponent } from 'vue';
-import axios from 'axios';
+  import CustomAlert from '../components/Alert.vue';
+  import { defineComponent } from 'vue';  
+  import axios from 'axios';
 
-export default defineComponent({
-  data() {
-    return {
-      name: '',
-      password: '',
-    };
-  },
-  methods: {
-    async login() {
-      try {
-        const response = await axios.post('http://localhost:3333/users/login', {
-          name: this.name,
-          password: this.password,
-        });
-
-        // Tratar a resposta do back-end
-        if (response.data.token) {
-          // Login bem-sucedido
-          console.log(response.data.message);
-        } else {
-          // Exibir mensagem de erro
-          console.error(response.data.message);
-        }
-      } catch (error) {
-        // Tratar erros de requisição
-        console.error('Erro ao realizar o login:', error.message);
-      }
+  export default defineComponent({
+    components: {
+      CustomAlert
     },
-  },
-});
+    data() {
+      return {
+        name: '',
+        password: '',
+        errorMessage: ''
+      };
+    },
+    methods: {
+      async login() {
+        this.errorMessage = '';
+        try {
+          const response = await axios.post('http://localhost:3333/users/login', {
+            name: this.name,
+            password: this.password,
+          });
+          if (response.status === 200) {
+
+            this.$router.push('/inicial');
+          }
+
+        } catch (error) {
+          if (error.response && error.response.status === 400) {
+            this.errorMessage = 'Credenciais inválidas. Verifique seu nome e senha.';
+          } else {
+            this.errorMessage = 'Ocorreu um erro ao processar a solicitação. Tente novamente mais tarde.';
+          }
+        }
+      },
+    },
+  });
 </script>
