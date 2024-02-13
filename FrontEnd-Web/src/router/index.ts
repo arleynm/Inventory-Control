@@ -4,6 +4,7 @@ import type { RouteRecordRaw } from 'vue-router';
 import Home from '../views/HomeView.vue';
 import Login from '../views/LoginView.vue';
 import Inicial from '../views/InicialView.vue';
+import users from '../views/UserControlView.vue'
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -21,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/inicial',
     name: 'Inicial',
     component: Inicial,
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: users,
   },
 ];
 

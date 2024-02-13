@@ -1,80 +1,80 @@
 <template>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Ji7P9F5MzG7N2Uby5q2t0En5rN" crossorigin="anonymous">
- <div :class="{ 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }">
-    <nav :class="['navbar', { 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }]">
-      <div class="flex items-center justify-between">
-        <h2 class="text-lg font-bold ml-14">Inventory Control</h2>
-        <div class="flex items-center">
-          <span id="sunIcon" class="sun-icon">🔆</span>
-          <input type="checkbox" id="switch" v-model="isDarkTheme" />
-          <label for="switch"></label>
-          <span id="moonIcon" class="moon-icon pr-10 pl-2" >🌙</span>
-          <router-link to="/login" class="block py-2 px-4 hover:bg-[#FF0000] rounded" tag="a">
-            <i class="fas fa-sign-out-alt"></i> Sair
-          </router-link>
+    <div :class="{ 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }">
+      <nav :class="['navbar', { 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }]">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-bold ml-14">Inventory Control</h2>
+          <div class="flex items-center">
+            <span id="sunIcon" class="sun-icon">🔆</span>
+            <input type="checkbox" id="switch" v-model="isDarkTheme" />
+            <label for="switch"></label>
+            <span id="moonIcon" class="moon-icon pr-10 pl-2" >🌙</span>
+            <router-link to="/login" class="block py-2 px-4 hover:bg-[#FF0000] rounded" tag="a">
+              <i class="fas fa-sign-out-alt"></i> Sair
+            </router-link>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <aside :class="['sidebar', { 'expanded': isSidebarExpanded, 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }]">
-      <button @click="toggleSidebar" class="text-white p-2 focus:outline-none ml-4 mb-2">
-        <i class="fas fa-bars"></i>
-      </button>
-      <hr class="sidebar-separator">
-      <nav>
-        <ul>
-          <li>
-            <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
-              <i class="fas fa-random mr-2 ml-2"></i>
-              <span v-show="isSidebarExpanded">Tipo Movimentação</span>
-            </router-link>
-          </li>
-          <hr class="sidebar-separator">
-          <li>
-            <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
-              <i class="fas fa-box mr-2 ml-2"></i>
-              <span v-show="isSidebarExpanded">Produtos</span>
-            </router-link>
-          </li>
-          <hr class="sidebar-separator">
-          <li>
-            <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
-              <i class="fa-sharp fa-solid fa-right-left mr-2 ml-2"></i>
-              <span v-show="isSidebarExpanded">Movimentações</span>
-            </router-link>
-          </li>
-          <hr class="sidebar-separator">
-          <li>
-            <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
-              <i class="fas fa-network-wired mr-2 ml-2"></i>
-              <span v-show="isSidebarExpanded">Categorias</span>
-            </router-link>
-          </li>
-          <hr class="sidebar-separator">
-          <li>
-            <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
-              <i class="fas fa-money-check mr-2 ml-2"></i>
-              <span v-show="isSidebarExpanded">Relatórios</span>
-            </router-link>
-          </li>
-          <hr class="sidebar-separator">
-          <li>
-            <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
-              <i class="fas fa-user-cog mr-2 ml-2"></i>
-              <span v-show="isSidebarExpanded">Controle de acesso</span>
-            </router-link>
-          </li>
-        </ul>
-        <hr class="sidebar-separator">
-
       </nav>
-        <div v-if="isSidebarExpanded" class="username-container">
-          <span>Nome de Usuário</span>
-        </div>
-    </aside>
-  </div>
+  
+      <aside :class="['sidebar', { 'expanded': isSidebarExpanded, 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }]">
+        <button @click="toggleSidebar" class="text-white p-2 focus:outline-none ml-4 mb-2">
+          <i class="fas fa-bars"></i>
+        </button>
+        <hr class="sidebar-separator">
+        <nav>
+          <ul>
+            <li>
+              <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
+                <i class="fas fa-random mr-2 ml-2"></i>
+                <span v-show="isSidebarExpanded">Tipo Movimentação</span>
+              </router-link>
+            </li>
+            <hr class="sidebar-separator">
+            <li>
+              <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
+                <i class="fas fa-box mr-2 ml-2"></i>
+                <span v-show="isSidebarExpanded">Produtos</span>
+              </router-link>
+            </li>
+            <hr class="sidebar-separator">
+            <li>
+              <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
+                <i class="fa-sharp fa-solid fa-right-left mr-2 ml-2"></i>
+                <span v-show="isSidebarExpanded">Movimentações</span>
+              </router-link>
+            </li>
+            <hr class="sidebar-separator">
+            <li>
+              <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
+                <i class="fas fa-network-wired mr-2 ml-2"></i>
+                <span v-show="isSidebarExpanded">Categorias</span>
+              </router-link>
+            </li>
+            <hr class="sidebar-separator">
+            <li>
+              <router-link to="/perfil" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
+                <i class="fas fa-money-check mr-2 ml-2"></i>
+                <span v-show="isSidebarExpanded">Relatórios</span>
+              </router-link>
+            </li>
+            <hr class="sidebar-separator">
+            <li>
+              <router-link to="/users" class="block py-2 px-4 hover:bg-[#77bcbc] bort" tag="a">
+                <i class="fas fa-user-cog mr-2 ml-2"></i>
+                <span v-show="isSidebarExpanded">Controle de acesso</span>
+              </router-link>
+            </li>
+          </ul>
+          <hr class="sidebar-separator">
+  
+        </nav>
+          <div v-if="isSidebarExpanded" class="username-container">
+            <span>Nome de Usuário</span>
+          </div>
+      </aside>
+    </div>
 </template>
-
+  
 <script>
 import UserImage from './LogoImage.vue'; 
 
@@ -92,15 +92,16 @@ export default {
   methods: {
     toggleSidebar() {
       this.isSidebarExpanded = !this.isSidebarExpanded;
+      this.$emit('updateTheme', this.isDarkTheme);
     },
   },
 };
 
 </script>
-
+  
 <style scoped>
   .sidebar {
-    width: 70px; 
+    width: 4.5%; 
     transition: width 0.4s ease;
     background-color: #109798;
     color: white;
@@ -230,6 +231,4 @@ export default {
     text-align: center;
     color: #ffffff; 
   }
-
-
 </style>
